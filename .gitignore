@@ -88,3 +88,15 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+SwiftUI_MAUI_Bindings/.vs/
+SwiftUI_MAUI_Bindings/.idea/
+SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/bin/
+SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/obj/
+XCFrameworks/
+MAUI_App/.idea/
+MAUI_App/MAUI_App.sln.DotSettings.user
+MAUI_App/MAUI_App/bin/
+MAUI_App/MAUI_App/obj/
+MAUI_Library/.idea/
+MAUI_Library/MAUI_Library/bin/
+MAUI_Library/MAUI_Library/obj/
