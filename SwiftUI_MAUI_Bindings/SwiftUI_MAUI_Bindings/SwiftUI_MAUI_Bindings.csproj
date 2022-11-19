@@ -13,7 +13,7 @@
   <ItemGroup>
     <NativeReference Include="..\..\XCFrameworks\SwiftUI_MAUI_Framework.xcframework">
       <Kind>Framework</Kind>
-      <Frameworks>Foundation UIKit</Frameworks>
+      <Frameworks>Foundation UIKit SwiftUI</Frameworks>
     </NativeReference>
   </ItemGroup>
 </Project>
