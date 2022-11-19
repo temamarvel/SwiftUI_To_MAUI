@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3BDF304C29290333005D4DBC /* HelloWorldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF304B29290333005D4DBC /* HelloWorldView.swift */; };
+		3BDF304E29290602005D4DBC /* HelloWorldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3BDF30412928FE3D005D4DBC /* SwiftUI_MAUI_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUI_MAUI_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BDF304B29290333005D4DBC /* HelloWorldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldView.swift; sourceTree = "<group>"; };
+		3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				3BDF304B29290333005D4DBC /* HelloWorldView.swift */,
+				3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */,
 			);
 			path = SwiftUI_MAUI_Framework;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BDF304C29290333005D4DBC /* HelloWorldView.swift in Sources */,
+				3BDF304E29290602005D4DBC /* HelloWorldWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
