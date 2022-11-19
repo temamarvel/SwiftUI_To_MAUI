@@ -16,9 +16,10 @@ import SwiftUI
     
     public override init() {
         super.init()
-        
+
         swiftUIView = HelloWorldView()
         guard let rootView = swiftUIView else { return }
         hostingController = UIHostingController(rootView: rootView)
     }
+
 }
