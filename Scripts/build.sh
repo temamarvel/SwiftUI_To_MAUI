@@ -8,9 +8,7 @@ print_yellow() {
   printf "\e[33m$1\e[m"
 }
 
-pwd
-cd ..
-pwd
+#CLEAN
 
 print_yellow "\n[Clean directories]\n"
 
@@ -27,6 +25,8 @@ rm -r SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/obj
 print_yellow "Clean MAUI_Library...\n"
 rm -r MAUI_Library/MAUI_Library/bin
 rm -r MAUI_Library/MAUI_Library/obj
+
+#CREATE XCFramework
 
 cd SwiftUI_MAUI_Framework
 
@@ -51,6 +51,8 @@ xcodebuild -create-xcframework \
  -framework ../XCFrameworks/SwiftMaui-ios.xcarchive/Products/Library/Frameworks/SwiftUI_MAUI_Framework.framework \
  -output ../XCFrameworks/SwiftUI_MAUI_Framework.xcframework
 
+#GENERATE ApiDefinitions
+
 cd ..
 
 print_yellow "\n[Generate ApiDefinitions.cs file]\n"
@@ -69,9 +71,13 @@ cp XCFrameworks/ApiDefinitions.cs SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/
 
 cd SwiftUI_MAUI_Bindings
 
+#BUILD Bindings library
+
 print_yellow "\n[Build bindings]\n"
 
 dotnet build --no-incremental
+
+#BUILD MAUI library
 
 cd -
 
