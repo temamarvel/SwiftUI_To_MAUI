@@ -7,7 +7,7 @@ In MacOS terminal
 Go to SwiftUI_To_MAUI/Scripts directory then run build.sh script
 
 ```zsh
-<Scripts directory> ./build.sh
+<Scripts directory> % ./build.sh
 ```
 
 The script builds step by step:
