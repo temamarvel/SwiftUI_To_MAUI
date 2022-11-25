@@ -8,6 +8,9 @@ print_yellow() {
   printf "\e[33m$1\e[m"
 }
 
+#GO TO ROOT DIRECTORY
+cd ..
+
 #CLEAN
 
 print_yellow "\n[Clean directories]\n"
