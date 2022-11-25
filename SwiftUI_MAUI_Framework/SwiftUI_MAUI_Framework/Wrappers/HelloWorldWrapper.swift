@@ -21,5 +21,4 @@ import SwiftUI
         guard let rootView = swiftUIView else { return }
         hostingController = UIHostingController(rootView: rootView)
     }
-
 }
