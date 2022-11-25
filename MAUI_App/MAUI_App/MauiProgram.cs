@@ -15,6 +15,7 @@ public static class MauiProgram {
             }).ConfigureMauiHandlers(handlers =>
             {
                 handlers.AddHandler(typeof(HelloWorldControl), typeof(HelloWorldHandler));
+                handlers.AddHandler(typeof(SpinEditControl), typeof(SpinEditHandler));
             });
 
 #if DEBUG

@@ -38,6 +38,10 @@
             
             <mauiLibrary:HelloWorldControl/>
             
+            <mauiLibrary:SpinEditControl x:Name="spinEditControl"/>
+            
+            <Entry BindingContext="{x:Reference spinEditControl}" Text="{Binding Interval, Mode=OneWayToSource}" TextColor="Green"/>
+            
         </VerticalStackLayout>
     </ScrollView>
 
