@@ -27,6 +27,7 @@ import SwiftUI
             handler(interval)
         }
     }
+    
     @objc public var onValueChanged : ((Decimal) -> Void)?
     @objc public var onIntervalChanged : ((Decimal) -> Void)?
     
