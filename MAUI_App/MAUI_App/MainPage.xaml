@@ -15,32 +15,18 @@
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
             
             <mauiLibrary:HelloWorldControl/>
             
-            <mauiLibrary:SpinEditControl x:Name="spinEditControl"/>
+            <mauiLibrary:SpinEditControl x:Name="spinEditControl" 
+                                         Value="1" 
+                                         Interval="5"
+                                         BorderColor="Green"
+                                         FocusedBorderColor="Purple"/>
             
-            <Entry BindingContext="{x:Reference spinEditControl}" Text="{Binding Interval, Mode=OneWayToSource}" TextColor="Green"/>
+            <Label Text="Interval:"/>
+            <Entry BindingContext="{x:Reference spinEditControl}" 
+                   Text="{Binding Interval, Mode=TwoWay}"/>
             
         </VerticalStackLayout>
     </ScrollView>

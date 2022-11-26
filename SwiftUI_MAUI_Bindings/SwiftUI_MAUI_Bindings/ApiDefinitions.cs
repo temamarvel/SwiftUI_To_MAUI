@@ -18,6 +18,14 @@ namespace SwiftUI_MAUI_Framework
 	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework15SpinEditWrapper")]
 	interface SpinEditWrapper
 	{
+		// @property (nonatomic, strong) UIColor * _Nonnull borderColor;
+		[Export ("borderColor", ArgumentSemantic.Strong)]
+		UIColor BorderColor { get; set; }
+
+		// @property (nonatomic, strong) UIColor * _Nonnull focusedBorderColor;
+		[Export ("focusedBorderColor", ArgumentSemantic.Strong)]
+		UIColor FocusedBorderColor { get; set; }
+
 		// @property (nonatomic) NSDecimal value;
 		[Export ("value", ArgumentSemantic.Assign)]
 		NSDecimal Value { get; set; }

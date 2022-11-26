@@ -12,6 +12,9 @@ import SwiftUI
     var swiftUIView: SpinEditView?
     var hostingController: UIHostingController<SpinEditView>?
     
+    @objc @Published public var borderColor: UIColor = UIColor(Color.secondary)
+    @objc @Published public var focusedBorderColor: UIColor = UIColor(Color.blue)
+    
     @objc @Published public var value: Decimal = 0 {
         didSet {
             guard let handler = onValueChanged else { return }
@@ -21,7 +24,7 @@ import SwiftUI
     @objc @Published public var interval: Decimal = 1 {
         didSet {
             guard let handler = onIntervalChanged else { return }
-            handler(value)
+            handler(interval)
         }
     }
     @objc public var onValueChanged : ((Decimal) -> Void)?
