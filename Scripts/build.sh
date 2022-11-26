@@ -15,17 +15,17 @@ cd ..
 
 print_yellow "\n[Clean directories]\n"
 
-print_yellow "Clean XCFrameworks...\n"
+printf "Clean XCFrameworks...\n"
 rm XCFrameworks/ApiDefinitions.cs
 rm -r XCFrameworks/*.xcarchive
 rm -r XCFrameworks/SwiftUI_MAUI_Framework.xcframework
 
-print_yellow "Clean SwiftUI_MAUI_Bindings...\n"
+printf "Clean SwiftUI_MAUI_Bindings...\n"
 rm SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/ApiDefinitions.cs
 rm -r SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/bin
 rm -r SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/obj
 
-print_yellow "Clean MAUI_Library...\n"
+printf "Clean MAUI_Library...\n"
 rm -r MAUI_Library/MAUI_Library/bin
 rm -r MAUI_Library/MAUI_Library/obj
 
