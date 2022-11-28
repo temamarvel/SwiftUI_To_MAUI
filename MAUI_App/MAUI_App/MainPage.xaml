@@ -18,14 +18,17 @@
             
             <mauiLibrary:HelloWorldControl/>
             
-            <mauiLibrary:SpinEditControl x:Name="spinEditControl" 
-                                         Value="1" 
-                                         Interval="5"
+            <mauiLibrary:SpinEditControl x:Name="spinEditControl"
                                          BorderColor="Green"
-                                         FocusedBorderColor="Purple"/>
+                                         FocusedBorderColor="Purple"
+                                         Value="1" />
+            
+            <Label Text="Value:"/>
+            <Entry BindingContext="{x:Reference spinEditControl}"
+                   Text="{Binding Value, Mode=TwoWay}"/>
             
             <Label Text="Interval:"/>
-            <Entry BindingContext="{x:Reference spinEditControl}" 
+            <Entry BindingContext="{x:Reference spinEditControl}"
                    Text="{Binding Interval, Mode=TwoWay}"/>
             
         </VerticalStackLayout>
