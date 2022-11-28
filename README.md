@@ -26,6 +26,7 @@ Also, you can set parameters to build partially.
  * **-h** or **--help** - shows help
  
 Example:
+
 Run to build Swift framework and Bindings library
 ```zsh
   ./build.sh -ios -b
