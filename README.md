@@ -29,5 +29,5 @@ Example:
 
 Run to build Swift framework and Bindings library
 ```zsh
-  ./build.sh -ios -b
+./build.sh -ios -b
 ```
