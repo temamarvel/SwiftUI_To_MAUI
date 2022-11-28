@@ -8,7 +8,32 @@ print_yellow() {
   printf "\e[33m$1\e[m"
 }
 
+#SETUP BUILD CONFIGURATION
+
+ios=true
+bindings=true
+maui=true
+
+while [[ "$#" -gt 0 ]]
+do case $1 in
+    --ios) ios="$2"
+    shift;;
+    -b|--bindings) bindings="$2"
+    shift;;
+    -m|--maui) maui=$2;;
+    *) echo "Unknown parameter passed: $1"
+    exit 1;;
+esac
+shift
+done
+
+print_yellow "\nBUILD TARGETS:\n"
+print_yellow "SwiftUI_MAUI_Framework = $ios\n"
+print_yellow "SwiftUI_MAUI_Bindings = $bindings\n"
+print_yellow "MAUI_Library = $maui\n"
+
 #GO TO ROOT DIRECTORY
+
 cd ..
 
 #CLEAN
