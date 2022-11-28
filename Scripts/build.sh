@@ -11,7 +11,7 @@ print_yellow() {
 print_help(){
   echo "Run ./build without parameters to build ALL PARTS (Swift framework, Binding library, MAUI library). Default behavior."
   echo "\nParameters:"
-  echo "-all\t\t\t - builds all parts (like without parameters)"
+  echo "-all or --all\t\t - builds all parts (like without parameters)"
   echo "-ios or --ios\t\t - builds Swift framework"
   echo "-b or --bindings\t - builds Bindings library"
   echo "-m or --maui\t\t - builds MAUI library"
@@ -34,7 +34,7 @@ maui=false
 while [[ "$#" -gt 0 ]]
 do
 case $1 in
-    -all)
+    -all|--all)
       all=true;;
     -ios|--ios)
       all=false
