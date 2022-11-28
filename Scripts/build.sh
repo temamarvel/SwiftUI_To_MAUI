@@ -1,4 +1,7 @@
 #!/bin/zsh
+timestamp() {
+  date +"%T" # current time
+}
 
 print_green() {
   printf "\e[32m$1\e[m"
@@ -21,6 +24,8 @@ print_help(){
   echo "\nSource on GitHub:"
   echo "https://github.com/temamarvel/SwiftUI_To_MAUI"
 }
+
+print_green "SCRIPT STARTED at $(timestamp)"
 
 #SETUP BUILD CONFIGURATION
 
@@ -179,4 +184,4 @@ else
   print_yellow "\n[Build MAUI library skipped...]\n"
 fi
 
-print_green "\nBUILD DONE!\n"
+print_green "\nSCRIPT FINISHED at $(timestamp)!\n"
