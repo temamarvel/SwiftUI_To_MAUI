@@ -18,6 +18,8 @@ print_help(){
   echo "-h or --help\t\t - shows help"  
   echo "\nExample:"
   echo "./build.sh -ios -b\ -- builds Swift framework and Bindings library"
+  echo "\nSource on GitHub:"
+  echo "https://github.com/temamarvel/SwiftUI_To_MAUI"
 }
 
 #SETUP BUILD CONFIGURATION
@@ -61,7 +63,7 @@ if [[ "$all" = true ]]; then
 fi
 
 if [[ "$ios" = false ]] && [[ "$bindings" = false ]] && [[ "$maui" = false ]]; then
-  exit 1  
+  exit 0
 fi
 
 print_yellow "\nBUILD TARGETS:\n"
