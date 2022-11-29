@@ -11,6 +11,8 @@
 		3BDF304E29290602005D4DBC /* HelloWorldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */; };
 		3BE06E292930FC77007D4FDF /* SpinEditWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE06E282930FC77007D4FDF /* SpinEditWrapper.swift */; };
 		3BE06E2B2930FD08007D4FDF /* SpinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE06E2A2930FD08007D4FDF /* SpinEditView.swift */; };
+		3BECC7BA293626F000B57A03 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7B9293626F000B57A03 /* Protocols.swift */; };
+		3BECC7BC2936279300B57A03 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7BB2936279300B57A03 /* HostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldWrapper.swift; sourceTree = "<group>"; };
 		3BE06E282930FC77007D4FDF /* SpinEditWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinEditWrapper.swift; sourceTree = "<group>"; };
 		3BE06E2A2930FD08007D4FDF /* SpinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinEditView.swift; sourceTree = "<group>"; };
+		3BECC7B9293626F000B57A03 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		3BECC7BB2936279300B57A03 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				3BE06E272930FC4D007D4FDF /* Wrappers */,
 				3BE06E262930FC3A007D4FDF /* Views */,
+				3BECC7B9293626F000B57A03 /* Protocols.swift */,
+				3BECC7BB2936279300B57A03 /* HostingController.swift */,
 			);
 			path = SwiftUI_MAUI_Framework;
 			sourceTree = "<group>";
@@ -154,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BECC7BC2936279300B57A03 /* HostingController.swift in Sources */,
+				3BECC7BA293626F000B57A03 /* Protocols.swift in Sources */,
 				3BE06E2B2930FD08007D4FDF /* SpinEditView.swift in Sources */,
 				3BDF304C29290333005D4DBC /* HelloWorldView.swift in Sources */,
 				3BE06E292930FC77007D4FDF /* SpinEditWrapper.swift in Sources */,
