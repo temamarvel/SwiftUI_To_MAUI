@@ -1,5 +1,4 @@
 using Foundation;
-using Microsoft.Maui.Graphics.Platform;
 using Microsoft.Maui.Handlers;
 using SwiftUI_MAUI_Framework;
 using UIKit;

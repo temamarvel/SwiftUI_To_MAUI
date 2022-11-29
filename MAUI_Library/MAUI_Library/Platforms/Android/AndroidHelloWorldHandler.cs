@@ -1,5 +1,4 @@
-﻿using Android.Widget;
-using Microsoft.Maui.Handlers;
+﻿using Microsoft.Maui.Handlers;
 using View = Android.Views.View;
 
 namespace MAUI_Library;
