@@ -14,23 +14,22 @@ import SwiftUI
 }
 
 protocol UIKitWrapper : NSObject, ObservableObject {
-    associatedtype Swift where Swift: View
-    associatedtype Controller where Controller : HostingController<Swift>
+    associatedtype SwiftUIView where SwiftUIView: View
+    associatedtype Controller where Controller : HostingController<SwiftUIView>
     
-    var swiftUIView : Swift? { get set }
+    var swiftUIView : SwiftUIView? { get set }
     var hostingController : Controller? { get set}
     
     init()
     
     //MARK: the method can't have default implementation in UIKitWrapper extension
     //It must reference view-model object, which conforms more than one protocol UIKitWrapper
-    //So, you must implement in by yourself
+    //So, you must implement it by yourself
     func createSwiftUIView() -> Void
 }
 
 extension UIKitWrapper {
-    func createController(view: Swift){
+    func createController(view: SwiftUIView){
         hostingController = Controller(rootView: view)
-        
     }
 }

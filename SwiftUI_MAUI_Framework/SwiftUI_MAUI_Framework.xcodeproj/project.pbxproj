@@ -13,6 +13,8 @@
 		3BE06E2B2930FD08007D4FDF /* SpinEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE06E2A2930FD08007D4FDF /* SpinEditView.swift */; };
 		3BECC7BA293626F000B57A03 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7B9293626F000B57A03 /* Protocols.swift */; };
 		3BECC7BC2936279300B57A03 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7BB2936279300B57A03 /* HostingController.swift */; };
+		3BECC7BE293637DF00B57A03 /* MaterialTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7BD293637DE00B57A03 /* MaterialTextEditView.swift */; };
+		3BECC7C0293638BC00B57A03 /* MaterialTextEditWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BECC7BF293638BC00B57A03 /* MaterialTextEditWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		3BE06E2A2930FD08007D4FDF /* SpinEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinEditView.swift; sourceTree = "<group>"; };
 		3BECC7B9293626F000B57A03 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		3BECC7BB2936279300B57A03 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		3BECC7BD293637DE00B57A03 /* MaterialTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextEditView.swift; sourceTree = "<group>"; };
+		3BECC7BF293638BC00B57A03 /* MaterialTextEditWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextEditWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			children = (
 				3BDF304B29290333005D4DBC /* HelloWorldView.swift */,
 				3BE06E2A2930FD08007D4FDF /* SpinEditView.swift */,
+				3BECC7BD293637DE00B57A03 /* MaterialTextEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			children = (
 				3BDF304D29290602005D4DBC /* HelloWorldWrapper.swift */,
 				3BE06E282930FC77007D4FDF /* SpinEditWrapper.swift */,
+				3BECC7BF293638BC00B57A03 /* MaterialTextEditWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 				3BECC7BC2936279300B57A03 /* HostingController.swift in Sources */,
 				3BECC7BA293626F000B57A03 /* Protocols.swift in Sources */,
 				3BE06E2B2930FD08007D4FDF /* SpinEditView.swift in Sources */,
+				3BECC7C0293638BC00B57A03 /* MaterialTextEditWrapper.swift in Sources */,
 				3BDF304C29290333005D4DBC /* HelloWorldView.swift in Sources */,
 				3BE06E292930FC77007D4FDF /* SpinEditWrapper.swift in Sources */,
+				3BECC7BE293637DF00B57A03 /* MaterialTextEditView.swift in Sources */,
 				3BDF304E29290602005D4DBC /* HelloWorldWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

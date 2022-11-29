@@ -14,6 +14,33 @@ namespace SwiftUI_MAUI_Framework
 		UIView UiView { get; }
 	}
 
+	// @protocol UIViewHost
+	/*
+  Check whether adding [Model] to this declaration is appropriate.
+  [Model] is used to generate a C# class that implements this protocol,
+  and might be useful for protocols that consumers are supposed to implement,
+  since consumers can subclass the generated class instead of implementing
+  the generated interface. If consumers are not supposed to implement this
+  protocol, then [Model] is redundant and will generate code that will never
+  be used.
+*/[Protocol (Name = "_TtP22SwiftUI_MAUI_Framework10UIViewHost_")]
+	interface UIViewHost
+	{
+		// @required @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
+		[Abstract]
+		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
+		UIView UiView { get; }
+	}
+
+	// @interface MaterialTextEditWrapper : NSObject <UIViewHost>
+	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework23MaterialTextEditWrapper")]
+	interface MaterialTextEditWrapper : UIViewHost
+	{
+		// @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
+		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
+		UIView UiView { get; }
+	}
+
 	// @interface SpinEditWrapper : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework15SpinEditWrapper")]
 	interface SpinEditWrapper
