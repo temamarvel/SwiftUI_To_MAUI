@@ -39,6 +39,10 @@ namespace SwiftUI_MAUI_Framework
 		// @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
 		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
 		UIView UiView { get; }
+
+		// @property (nonatomic, strong) UIImage * _Nullable leadingIcon;
+		[NullAllowed, Export ("leadingIcon", ArgumentSemantic.Strong)]
+		UIImage LeadingIcon { get; set; }
 	}
 
 	// @interface SpinEditWrapper : NSObject

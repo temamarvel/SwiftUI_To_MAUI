@@ -17,7 +17,7 @@ import SwiftUI
     @objc public var uiView: UIView? {
         hostingController?.view
     }
-    public var leadingIcon: UIImage?
+    @objc public var leadingIcon: UIImage?
     
     required public override init(){
         super.init()
