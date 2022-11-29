@@ -145,9 +145,9 @@ then
    -namespace SwiftUI_MAUI_Framework \
    -framework XCFrameworks/SwiftUI_MAUI_Framework.xcframework/ios-arm64/SwiftUI_MAUI_Framework.framework
 
-  #print_yellow "\n[Fix protocol/intarface names in ApiDefinitions.cs file]\n"
+  print_yellow "\n[Fix protocol/intarface names in ApiDefinitions.cs file]\n"
 
-  #python3 protocolsToInterface.py
+  python3 Scripts/protocolsToInterfaces.py
 
   cp XCFrameworks/ApiDefinitions.cs SwiftUI_MAUI_Bindings/SwiftUI_MAUI_Bindings/
 else
