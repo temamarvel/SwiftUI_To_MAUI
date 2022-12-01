@@ -10,11 +10,20 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Image
+                    Source="dotnet_bot"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    HeightRequest="100" 
+                    WidthRequest="100"/>
+                <Image
+                    Source="heart"
+                    SemanticProperties.Description="Love it!"
+                    HeightRequest="50"
+                    WidthRequest="50" />
+            </HorizontalStackLayout>
+            
+            <mauiLibrary:MaterialTextEditControl LeadingIconSource="heart"/>
             
             <mauiLibrary:HelloWorldControl/>
             
