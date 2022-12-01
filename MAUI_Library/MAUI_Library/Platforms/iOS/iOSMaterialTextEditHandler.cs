@@ -1,5 +1,3 @@
-using Foundation;
-using Microsoft.Maui.Graphics.Platform;
 using Microsoft.Maui.Handlers;
 using SwiftUI_MAUI_Framework;
 using UIKit;
@@ -18,7 +16,7 @@ public partial class MaterialTextEditHandler : ViewHandler<MaterialTextEditContr
         };
 
     private static void LeadingIconSource(MaterialTextEditHandler handler, MaterialTextEditControl materialTextEditControl) {
-        var image = materialTextEditControl.LeadingIconSource.GetPlatformImageAsync(handler.MauiContext).Result.Value;
+        handler.Wrapper.LeadingIcon = materialTextEditControl.LeadingIconSource.GetPlatformImageAsync(handler.MauiContext).Result.Value;
     }
 
     protected override UIView CreatePlatformView() {
