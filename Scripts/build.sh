@@ -11,6 +11,16 @@ print_yellow() {
   printf "\e[33m$1\e[m"
 }
 
+build() {
+  if [[ "$1" = false ]]; then
+    echo "Build in Debug"
+    dotnet build --no-incremental
+  else
+    echo "Build in Release"
+    dotnet build --no-incremental -c:Release
+  fi
+}
+
 print_help(){
   echo "Run ./build without parameters to build ALL PARTS (Swift framework, Binding library, MAUI library). Default behavior."
   echo "\nParameters:"
@@ -18,11 +28,12 @@ print_help(){
   echo "-ios or --ios\t\t - builds Swift framework"
   echo "-b or --bindings\t - builds Bindings library"
   echo "-m or --maui\t\t - builds MAUI library"
+  echo "-r or --release\t\t - builds dotnet parts in release"
   echo "-h or --help\t\t - shows help"  
   echo "\nExample:"
   echo "./build.sh -ios -b\ -- builds Swift framework and Bindings library"
   echo "\nSource on GitHub:"
-  echo "https://github.com/temamarvel/SwiftUI_To_MAUI"
+  echo "https://github.com/temamarvel/SwiftUI_MAUI"
 }
 
 print_green "SCRIPT STARTED at $(timestamp)"
@@ -34,6 +45,7 @@ all=true
 ios=false
 bindings=false
 maui=false
+isRelease=false
 
 #read parameters one by one
 while [[ "$#" -gt 0 ]]
@@ -52,7 +64,9 @@ case $1 in
       maui=true;;
     -h|--help)
       print_help
-      all=false;;      
+      all=false;;
+    -r|--release)
+      isRelease=true;;      
     *)
       echo "Unknown parameter passed: $1"
       print_help
@@ -162,7 +176,7 @@ then
 
   print_yellow "\n[Build bindings]\n"
 
-  dotnet build --no-incremental
+  build $isRelease
 
   cd ..
 else
@@ -177,7 +191,7 @@ then
 
   print_yellow "\n[Build MAUI library]\n"
 
-  dotnet build --no-incremental
+  build $isRelease
 
   cd ..
 else

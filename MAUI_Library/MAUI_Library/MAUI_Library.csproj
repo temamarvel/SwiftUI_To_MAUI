@@ -11,10 +11,15 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
     </PropertyGroup>
 
-    <ItemGroup>
+    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
       <Reference Include="SwiftUI_MAUI_Bindings">
         <HintPath>..\..\SwiftUI_MAUI_Bindings\SwiftUI_MAUI_Bindings\bin\Debug\net7.0-ios\SwiftUI_MAUI_Bindings.dll</HintPath>
       </Reference>
+    </ItemGroup>
+    <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
+        <Reference Include="SwiftUI_MAUI_Bindings">
+            <HintPath>..\..\SwiftUI_MAUI_Bindings\SwiftUI_MAUI_Bindings\bin\Release\net7.0-ios\SwiftUI_MAUI_Bindings.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
 </Project>
