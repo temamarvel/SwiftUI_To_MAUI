@@ -43,6 +43,26 @@ namespace SwiftUI_MAUI_Framework
 		// @property (nonatomic, strong) UIImage * _Nullable leadingIcon;
 		[NullAllowed, Export ("leadingIcon", ArgumentSemantic.Strong)]
 		UIImage LeadingIcon { get; set; }
+
+		// @property (copy, nonatomic) NSString * _Nonnull text;
+		[Export ("text")]
+		string Text { get; set; }
+
+		// @property (nonatomic, strong) UIColor * _Nonnull borderColor;
+		[Export ("borderColor", ArgumentSemantic.Strong)]
+		UIColor BorderColor { get; set; }
+
+		// @property (nonatomic, strong) UIColor * _Nonnull focusedBorderColor;
+		[Export ("focusedBorderColor", ArgumentSemantic.Strong)]
+		UIColor FocusedBorderColor { get; set; }
+
+		// @property (nonatomic) CGFloat borderThickness;
+		[Export ("borderThickness")]
+		nfloat BorderThickness { get; set; }
+
+		// @property (nonatomic) UIEdgeInsets padding;
+		[Export ("padding", ArgumentSemantic.Assign)]
+		UIEdgeInsets Padding { get; set; }
 	}
 
 	// @interface SpinEditWrapper : NSObject
