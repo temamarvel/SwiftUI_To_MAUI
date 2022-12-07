@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-@objc public class ButtonDescription : NSObject, Identifiable, ObservableObject {
+@objc public class ButtonDescription : NSObject, Identifiable {
     @objc public var id : Int { return index }
     
     let index: Int
     public let text: String
-    @Published public var isSelected = false
+    public var isSelected = false
     
     init(index: Int, text: String) {
         self.index = index
