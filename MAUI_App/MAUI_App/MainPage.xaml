@@ -10,22 +10,26 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <HorizontalStackLayout HorizontalOptions="Center">
-                <Image
-                    Source="dotnet_bot"
-                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                    HeightRequest="100" 
-                    WidthRequest="100"/>
-                <Image
-                    Source="heart"
-                    SemanticProperties.Description="Love it!"
-                    HeightRequest="50"
-                    WidthRequest="50" />
-            </HorizontalStackLayout>
+            <!-- <HorizontalStackLayout HorizontalOptions="Center"> -->
+            <!--     <Image -->
+            <!--         Source="dotnet_bot" -->
+            <!--         SemanticProperties.Description="Cute dot net bot waving hi to you!" -->
+            <!--         HeightRequest="100"  -->
+            <!--         WidthRequest="100"/> -->
+            <!--     <Image -->
+            <!--         Source="heart" -->
+            <!--         SemanticProperties.Description="Love it!" -->
+            <!--         HeightRequest="50" -->
+            <!--         WidthRequest="50" /> -->
+            <!-- </HorizontalStackLayout> -->
             
             <mauiLibrary:MaterialTextEditControl LeadingIconSource="heart"/>
             
-            <mauiLibrary:HelloWorldControl/>
+            <mauiLibrary:SegmentedButtonsControl x:Name="segmented"/>
+            
+            <Button Text="Set selection" Clicked="Button_OnClicked"/>
+            
+            <Switch Toggled="Switch_OnToggled"/>
             
             <mauiLibrary:SpinEditControl x:Name="spinEditControl"
                                          BorderColor="Green"
