@@ -1,10 +1,18 @@
 using System;
 using Foundation;
 using ObjCRuntime;
+using SwiftUI_MAUI_Framework;
 using UIKit;
 
 namespace SwiftUI_MAUI_Framework
 {
+	// @interface ButtonDescription : NSObject
+	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework17ButtonDescription")]
+	[DisableDefaultCtor]
+	interface ButtonDescription
+	{
+	}
+
 	// @interface HelloWorldWrapper : NSObject
 	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework17HelloWorldWrapper")]
 	interface HelloWorldWrapper
@@ -44,6 +52,14 @@ namespace SwiftUI_MAUI_Framework
 		[NullAllowed, Export ("leadingIcon", ArgumentSemantic.Strong)]
 		UIImage LeadingIcon { get; set; }
 
+		// @property (nonatomic) CGFloat borderThickness;
+		[Export ("borderThickness")]
+		nfloat BorderThickness { get; set; }
+
+		// @property (nonatomic) UIEdgeInsets padding;
+		[Export ("padding", ArgumentSemantic.Assign)]
+		UIEdgeInsets Padding { get; set; }
+
 		// @property (copy, nonatomic) NSString * _Nonnull text;
 		[Export ("text")]
 		string Text { get; set; }
@@ -55,14 +71,31 @@ namespace SwiftUI_MAUI_Framework
 		// @property (nonatomic, strong) UIColor * _Nonnull focusedBorderColor;
 		[Export ("focusedBorderColor", ArgumentSemantic.Strong)]
 		UIColor FocusedBorderColor { get; set; }
+	}
 
-		// @property (nonatomic) CGFloat borderThickness;
-		[Export ("borderThickness")]
-		nfloat BorderThickness { get; set; }
+	// @interface SegmentedButtonsWrapper : NSObject <UIViewHost>
+	[BaseType (typeof(NSObject), Name = "_TtC22SwiftUI_MAUI_Framework23SegmentedButtonsWrapper")]
+	interface SegmentedButtonsWrapper : UIViewHost
+	{
+		// @property (readonly, nonatomic, strong) UIView * _Nullable uiView;
+		[NullAllowed, Export ("uiView", ArgumentSemantic.Strong)]
+		UIView UiView { get; }
 
-		// @property (nonatomic) UIEdgeInsets padding;
-		[Export ("padding", ArgumentSemantic.Assign)]
-		UIEdgeInsets Padding { get; set; }
+		// @property (copy, nonatomic) NSArray<ButtonDescription *> * _Nonnull buttons;
+		[Export ("buttons", ArgumentSemantic.Copy)]
+		ButtonDescription[] Buttons { get; set; }
+
+		// @property (nonatomic) BOOL allowsMultipleSelection;
+		[Export ("allowsMultipleSelection")]
+		bool AllowsMultipleSelection { get; set; }
+
+		// @property (copy, nonatomic) NSArray<NSNumber *> * _Nonnull selectedIndices;
+		[Export ("selectedIndices", ArgumentSemantic.Copy)]
+		NSNumber[] SelectedIndices { get; set; }
+
+		// @property (readonly, copy, nonatomic) NSArray<ButtonDescription *> * _Nonnull selectedButtons;
+		[Export ("selectedButtons", ArgumentSemantic.Copy)]
+		ButtonDescription[] SelectedButtons { get; }
 	}
 
 	// @interface SpinEditWrapper : NSObject
