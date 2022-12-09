@@ -12,10 +12,10 @@ public partial class MaterialTextEditHandler : ViewHandler<MaterialTextEditContr
 
     private static IPropertyMapper<MaterialTextEditControl, MaterialTextEditHandler> PropertyMapper =
         new PropertyMapper<MaterialTextEditControl, MaterialTextEditHandler>(ViewMapper) {
-            [nameof(MaterialTextEditControl.LeadingIconSource)] = LeadingIconSource,
+            [nameof(MaterialTextEditControl.LeadingIconSource)] = MapLeadingIconSource,
         };
 
-    private static void LeadingIconSource(MaterialTextEditHandler handler, MaterialTextEditControl materialTextEditControl) {
+    private static void MapLeadingIconSource(MaterialTextEditHandler handler, MaterialTextEditControl materialTextEditControl) {
         handler.Wrapper.LeadingIcon = materialTextEditControl.LeadingIconSource.GetPlatformImageAsync(handler.MauiContext).Result.Value;
     }
 
