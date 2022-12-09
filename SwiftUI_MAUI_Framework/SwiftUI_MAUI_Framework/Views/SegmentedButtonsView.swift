@@ -7,15 +7,13 @@
 
 import SwiftUI
 
-@objc public class ButtonDescription : NSObject, Identifiable {
-    @objc public var id : Int { return index }
-    
-    let index: Int
-    public let text: String
+@objc public class ButtonDescription : NSObject, Identifiable{
+    public let id = UUID()
+    public var text: String
     public var isSelected = false
+    public var cachedIsSelected = false
     
-    init(index: Int, text: String) {
-        self.index = index
+    init(text: String) {
         self.text = text
     }
 }
@@ -25,12 +23,23 @@ struct SegmentedButtonsView: View {
     
     var body: some View {
         VStack{
-            HStack{
+            HStack(spacing: 0){
                 ForEach($wrapper.buttons){ $button in
-                    Toggle(button.text, isOn: $button.isSelected).toggleStyle(.button)
+                    HStack(spacing: 0){
+                        Toggle(button.text, isOn: $button.isSelected)
+                            .toggleStyle(.button)
+                        
+                        if wrapper.buttons.last != button {
+                            Divider()
+                        }
+                    }.fixedSize()
+                    
                 }
-            }.background(.orange).clipShape(Capsule())
+            }
+            .background(.orange)
+            .clipShape(Capsule())
             
+            // MARK: Tests elements
             ForEach(wrapper.buttons){ button in
                 Text(String(button.isSelected)).background(.green)
             }
@@ -38,11 +47,14 @@ struct SegmentedButtonsView: View {
             Text(wrapper.selectedIndices.description)
             
             Button("Click me", action: {
-                //wrapper.buttons.append(ButtonDescription(index: 3, text: "Four"))
-                wrapper.buttons[0].isSelected = true
+                wrapper.buttons.append(ButtonDescription(text: "Four"))
+                //wrapper.objectWillChange.send()
+                wrapper.buttons[0].isSelected.toggle()
             })
             
-            
+            Button("Click me2", action: {
+                wrapper.selectedIndices = [0,2]
+            })
         }
     }
 }

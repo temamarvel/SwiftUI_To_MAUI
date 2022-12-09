@@ -19,9 +19,34 @@ import SwiftUI
         hostingController?.view
     }
     
-    @objc @Published public var buttons: [ButtonDescription] = [ButtonDescription(index: 0, text: "One"), ButtonDescription(index: 1, text: "Two"), ButtonDescription(index: 2, text: "Three")]
+    @objc @Published var buttons: [ButtonDescription] = [ButtonDescription(text: "One"), ButtonDescription(text: "Two"), ButtonDescription(text: "Three")] {
+        willSet(newButtons){
+            if !allowsMultipleSelection {
+                applySingleSelection(buttons: newButtons)
+            }
+            newButtons.forEach{ button in button.cachedIsSelected = button.isSelected }
+        }
+    }
     
-    public var selectedIndices: [Int] { buttons.filter { description in description.isSelected == true }.map { $0.index } }
+    @objc @Published public var allowsMultipleSelection = false
+    
+    @objc public var selectedIndices: [Int] {
+        set(newIndices){
+            buttons = buttons.enumerated().map { (index, element) in
+                if newIndices.contains(index) {
+                    element.isSelected = true
+                }
+                return element
+            }
+        }
+        get{
+            buttons.enumerated().compactMap{ (index, element) in
+                element.isSelected ? index : nil
+            }
+        }
+    }
+    
+    @objc public var selectedButtons: [ButtonDescription] { buttons.filter{ description in description.isSelected == true } }
     
     required public override init(){
         super.init()
@@ -31,5 +56,17 @@ import SwiftUI
     func createSwiftUIView() {
         swiftUIView = SegmentedButtonsView(wrapper: self)
         createController(view: swiftUIView!)
+    }
+    
+    func applySingleSelection(buttons: [ButtonDescription]) {
+        var hasOneSelected = false
+        
+        buttons.forEach{ newButton in
+            if !(newButton.isSelected && !newButton.cachedIsSelected) || hasOneSelected{
+                newButton.isSelected = false
+            } else if !hasOneSelected {
+                hasOneSelected = true
+            }
+        }
     }
 }
