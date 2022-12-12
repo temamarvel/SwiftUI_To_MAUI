@@ -11,6 +11,10 @@ namespace SwiftUI_MAUI_Framework
 	[DisableDefaultCtor]
 	interface ButtonDescription
 	{
+		// -(instancetype _Nonnull)initWithText:(NSString * _Nonnull)text __attribute__((objc_designated_initializer));
+		[Export ("initWithText:")]
+		[DesignatedInitializer]
+		NativeHandle Constructor (string text);
 	}
 
 	// @interface HelloWorldWrapper : NSObject
