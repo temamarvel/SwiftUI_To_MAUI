@@ -13,7 +13,7 @@ import SwiftUI
     public var isSelected = false
     public var cachedIsSelected = false
     
-    init(text: String) {
+    @objc public init(text: String) {
         self.text = text
     }
 }

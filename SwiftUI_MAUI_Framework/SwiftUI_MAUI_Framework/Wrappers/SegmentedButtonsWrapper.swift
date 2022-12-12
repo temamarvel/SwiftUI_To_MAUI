@@ -19,7 +19,7 @@ import SwiftUI
         hostingController?.view
     }
     
-    @objc @Published var buttons: [ButtonDescription] = [ButtonDescription(text: "One"), ButtonDescription(text: "Two"), ButtonDescription(text: "Three")] {
+    @objc @Published public var buttons: [ButtonDescription] = [ButtonDescription(text: "One"), ButtonDescription(text: "Two"), ButtonDescription(text: "Three")] {
         willSet(newButtons){
             if !allowsMultipleSelection {
                 applySingleSelection(buttons: newButtons)
