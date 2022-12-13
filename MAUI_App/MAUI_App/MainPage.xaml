@@ -6,6 +6,7 @@
 
     <ScrollView>
         <VerticalStackLayout
+            Spacing="5"
             VerticalOptions="Center">
 
             <!-- <HorizontalStackLayout HorizontalOptions="Center"> -->
@@ -23,7 +24,7 @@
             
             <mauiLibrary:MaterialTextEditControl LeadingIconSource="heart"/>
             
-            <mauiLibrary:SegmentedButtonsControl x:Name="segmented" BackgroundColor="Coral">
+            <mauiLibrary:SegmentedButtonsControl x:Name="segmented" BackgroundColor="Coral" HorizontalOptions="Fill">
                 <!-- <mauiLibrary:SegmentedButtonsControl.Buttons> -->
                 <!--     <mauiLibrary:ButtonDescription/> -->
                 <!-- </mauiLibrary:SegmentedButtonsControl.Buttons> -->
@@ -35,14 +36,14 @@
             <Button Text="AddButton" Clicked="Button_OnClicked2"/>
             <Button Text="Add Element" Clicked="Button_OnClicked3"/>
             
-            <Switch Toggled="Switch_OnToggled"/>
+            <Switch Toggled="Switch_OnToggled" BackgroundColor="Aqua" HorizontalOptions="Center"/>
             
             <mauiLibrary:SpinEditControl x:Name="spinEditControl"
                                          BorderColor="Green"
                                          FocusedBorderColor="Purple"
                                          Value="1" />
             
-            <Label Text="Value:"/>
+            <Label Text="Value:" BackgroundColor="Coral" HorizontalOptions="Fill"/>
             <Entry BindingContext="{x:Reference spinEditControl}"
                    Text="{Binding Value, Mode=TwoWay}"/>
             
