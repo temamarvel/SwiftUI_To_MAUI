@@ -52,8 +52,6 @@
       <Reference Include="MAUI_Library">
         <HintPath>..\..\MAUI_Library\MAUI_Library\bin\Debug\net7.0-ios\MAUI_Library.dll</HintPath>
       </Reference>
-   </ItemGroup>
-   <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
       <Reference Include="SwiftUI_MAUI_Bindings">
         <HintPath>..\..\SwiftUI_MAUI_Bindings\SwiftUI_MAUI_Bindings\bin\Debug\net7.0-ios\SwiftUI_MAUI_Bindings.dll</HintPath>
       </Reference>

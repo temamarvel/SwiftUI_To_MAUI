@@ -6,8 +6,6 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
             VerticalOptions="Center">
 
             <!-- <HorizontalStackLayout HorizontalOptions="Center"> -->
@@ -25,9 +23,17 @@
             
             <mauiLibrary:MaterialTextEditControl LeadingIconSource="heart"/>
             
-            <mauiLibrary:SegmentedButtonsControl x:Name="segmented"/>
+            <mauiLibrary:SegmentedButtonsControl x:Name="segmented" BackgroundColor="Coral">
+                <!-- <mauiLibrary:SegmentedButtonsControl.Buttons> -->
+                <!--     <mauiLibrary:ButtonDescription/> -->
+                <!-- </mauiLibrary:SegmentedButtonsControl.Buttons> -->
+            </mauiLibrary:SegmentedButtonsControl>
+            
+            <VerticalStackLayout x:Name="stackLayout"/>
             
             <Button Text="Set selection" Clicked="Button_OnClicked"/>
+            <Button Text="AddButton" Clicked="Button_OnClicked2"/>
+            <Button Text="Add Element" Clicked="Button_OnClicked3"/>
             
             <Switch Toggled="Switch_OnToggled"/>
             
