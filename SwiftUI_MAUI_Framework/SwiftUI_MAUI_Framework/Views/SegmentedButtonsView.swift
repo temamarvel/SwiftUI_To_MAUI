@@ -32,8 +32,8 @@ struct SegmentedButtonsView: View {
                         if wrapper.buttons.last != button {
                             Divider()
                         }
-                    }.fixedSize()
-                    
+                    }
+                    .fixedSize()
                 }
             }
             .background(.orange)

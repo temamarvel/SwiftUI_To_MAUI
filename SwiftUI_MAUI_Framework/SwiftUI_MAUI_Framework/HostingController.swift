@@ -16,6 +16,12 @@ class HostingController<Content> : UIHostingController<Content> where Content : 
         super.init(rootView: rootView)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        //have to fit size of UIView to size of SwiftUI view
+        self.view.sizeToFit()
+    }
+    
     //it is required initializer
     //so that it must be here
     @MainActor required dynamic init?(coder aDecoder: NSCoder) {
