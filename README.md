@@ -31,3 +31,10 @@ Run to build Swift framework and Bindings library
 ```zsh
 ./build.sh -ios -b
 ```
+
+### More infos
+
+Read the detailed explanation:
+
+- [How to use SwiftUI components in MAUI](https://medium.com/p/f43c54d2173c)
+- [Functional MAUI control based on SwiftUI view](https://medium.com/@tema.denisoff/functional-maui-control-based-on-swiftui-view-e23135d1f2bc)
