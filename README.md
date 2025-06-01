@@ -2,6 +2,8 @@
 How to use SwiftUI components as an iOS implementation for MAUI controls.
 
 ### How to build
+Note! I have to install [Sharpie](https://learn.microsoft.com/en-us/previous-versions/xamarin/cross-platform/macios/binding/objective-sharpie/get-started) before run the build script.
+
 In MacOS terminal
 
 Go to SwiftUI_To_MAUI/Scripts directory then run build.sh script
